@@ -116,7 +116,7 @@ const Sidebar = ({
           {/* Header */}
           <div className="mb-8">
             <div className="mb-4">
-              <a href="/#content" className="hover:opacity-80 transition-opacity inline-block">
+              <a href="/powerideas/" className="hover:opacity-80 transition-opacity inline-block">
                 <img
                   alt="ANLAK Logo"
                   width="120"
