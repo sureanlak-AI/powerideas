@@ -21,27 +21,47 @@ export function HeroScrollAnimation({
     offset: ["start start", "end start"]
   });
 
-  // Transform values for hero
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const heroScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
-  const heroY = useTransform(scrollYProgress, [0, 1], [0, -300]);
+  // Faster fade: hero fully gone by 35% scroll
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.35], [1, 0]);
+  const heroScale = useTransform(scrollYProgress, [0, 0.35], [1, 0.92]);
+  const heroY = useTransform(scrollYProgress, [0, 0.35], [0, -80]);
 
-  // Transform values for content
-  const contentY = useTransform(scrollYProgress, [0, 0.7, 1], [100, 0, 0]);
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.3, 0.7], [0, 0, 1]);
-
-  // Transform values for scroll indicator - disappears when user starts scrolling
-  const scrollIndicatorOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
-  const scrollIndicatorY = useTransform(scrollYProgress, [0, 0.1], [0, 20]);
+  // Scroll indicator fades quickly
+  const scrollIndicatorOpacity = useTransform(scrollYProgress, [0, 0.08], [1, 0]);
 
   return (
     <div ref={containerRef} className={`relative ${className}`}>
-      {/* Hero - static, scrolls away naturally */}
-      <div className="h-screen flex items-center justify-center overflow-hidden bg-[#FCFBF8] relative">
-        {heroContent}
-      </div>
+      {/* Fixed hero overlay that fades out */}
+      <motion.div 
+        className="fixed inset-0 z-20 flex items-center justify-center bg-[#FCFBF8] overflow-hidden"
+        style={{ opacity: heroOpacity }}
+      >
+        <motion.div style={{ scale: heroScale, y: heroY }} className="w-full h-full">
+          {heroContent}
+        </motion.div>
 
-      {/* Content */}
+        {/* Scroll indicator */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          style={{ opacity: scrollIndicatorOpacity }}
+        >
+          <div className="flex flex-col items-center gap-2 text-gray-400">
+            <span className="text-xs tracking-widest uppercase">Scroll</span>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              className="w-5 h-8 rounded-full border-2 border-gray-300 flex items-start justify-center pt-1"
+            >
+              <div className="w-1 h-2 bg-gray-400 rounded-full" />
+            </motion.div>
+          </div>
+        </motion.div>
+      </motion.div>
+
+      {/* Spacer for scroll distance (35vh — matches the fade distance) */}
+      <div className="h-[35vh]" />
+
+      {/* Content sits below and scrolls up into view */}
       <div className="relative z-10 bg-[#FCFBF8]">
         {children}
       </div>
@@ -103,7 +123,6 @@ export function HeroContent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* Title with typewriter effect */}
         <motion.div
           className="mb-12"
           initial={{ opacity: 0, y: 30 }}
@@ -111,7 +130,6 @@ export function HeroContent() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
-            {/* First line */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -121,7 +139,6 @@ export function HeroContent() {
               Piensa en grande.
             </motion.div>
             
-            {/* Second line with typewriter effect */}
             <motion.div
               className="flex flex-col md:flex-row items-center md:items-baseline justify-center md:justify-start gap-3 md:gap-6"
               initial={{ opacity: 0, y: 20 }}
@@ -129,8 +146,6 @@ export function HeroContent() {
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <span className="text-gray-900">Crea</span>
-              
-              {/* Typewriter component */}
               <div className="relative h-16 md:h-20 lg:h-24 flex items-center justify-start min-w-[200px] md:min-w-[300px]">
                 <Typewriter 
                   words={words}
@@ -146,4 +161,4 @@ export function HeroContent() {
       </motion.div>
     </div>
   );
-} 
+}

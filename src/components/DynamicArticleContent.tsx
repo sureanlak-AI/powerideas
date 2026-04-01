@@ -1,97 +1,130 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { Article } from "../types/article";
 import { marked } from "marked";
 
-interface DynamicArticleContentProps {
-  article: Article;
+export interface Heading {
+  id: string;
+  text: string;
+  level: number; // 2 = h2, 3 = h3
 }
 
-const DynamicArticleContent: React.FC<DynamicArticleContentProps> = ({ article }) => {
-  const [activeChapter, setActiveChapter] = useState("1");
+interface DynamicArticleContentProps {
+  article: Article;
+  onHeadingsExtracted?: (headings: Heading[]) => void;
+}
 
+// Custom marked renderer that adds IDs to headings
+let headingCounter = 0;
+const renderer = new marked.Renderer();
+const extractedHeadings: Heading[] = [];
+
+renderer.heading = function(data) {
+  const text = data.text;
+  const depth = data.depth;
+  const id = `heading-${headingCounter++}`;
+  extractedHeadings.push({ id, text, level: depth });
+  return `<h${depth} id="${id}" class="scroll-mt-8">${text}</h${depth}>`;
+};
+
+// Configure marked
+marked.setOptions({
+  renderer,
+  gfm: true,
+  breaks: true,
+});
+
+const DynamicArticleContent: React.FC<DynamicArticleContentProps> = ({ article, onHeadingsExtracted }) => {
+  const [activeHeadingId, setActiveHeadingId] = useState<string | null>(null);
+
+  // Parse markdown and extract headings
+  const { html, headings } = useMemo(() => {
+    headingCounter = 0;
+    extractedHeadings.length = 0;
+    const parsed = marked.parse(article.content) as string;
+    return { html: parsed, headings: [...extractedHeadings] };
+  }, [article.content]);
+
+  // Notify parent of headings
   useEffect(() => {
-    // Resetear al principio cuando cambia el artículo
+    onHeadingsExtracted?.(headings);
+    // Dispatch for sidebar
+    window.dispatchEvent(new CustomEvent('headingsExtracted', { detail: { headings } }));
+  }, [headings, onHeadingsExtracted]);
+
+  // Scroll spy
+  useEffect(() => {
     window.scrollTo(0, 0);
-    setActiveChapter("1");
+    if (headings.length === 0) return;
 
-    const observerOptions = {
-      root: null,
-      rootMargin: '-10% 0px -80% 0px',
-      threshold: 0.3
-    };
-
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const chapterNumber = entry.target.id.replace('chapter-', '');
-          setActiveChapter(chapterNumber);
-
-          // Dispatch custom event to update sidebar
-          window.dispatchEvent(new CustomEvent('activeChapterChange', {
-            detail: { activeChapter: chapterNumber }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Find the topmost visible heading
+        const visible = entries.filter(e => e.isIntersecting);
+        if (visible.length > 0) {
+          // Pick the one closest to top
+          const sorted = visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+          setActiveHeadingId(sorted[0].target.id);
+          window.dispatchEvent(new CustomEvent('activeHeadingChange', {
+            detail: { activeId: sorted[0].target.id }
           }));
         }
+      },
+      { rootMargin: '-10% 0px -80% 0px', threshold: 0.1 }
+    );
+
+    const timer = setTimeout(() => {
+      headings.forEach(h => {
+        const el = document.getElementById(h.id);
+        if (el) observer.observe(el);
       });
-    };
+    }, 200);
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    // Esperar un poco para que el DOM esté listo, luego observar elementos
-    setTimeout(() => {
-      const chapterElements = document.querySelectorAll('[id^="chapter-"]');
-      chapterElements.forEach(el => observer.observe(el));
-    }, 100);
-
-    return () => observer.disconnect();
-  }, [article.id]);
-
-  // Procesar el contenido HTML para agregar IDs a los headings
-  const processContentWithIds = (content: string): string => {
-    // Crear un DOM parser con HTML completo
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(`<html><body>${content}</body></html>`, 'text/html');
-    
-    // Encontrar todos los headings y agregar IDs
-    const headings = doc.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let chapterCounter = 2; // Empezar en 2 porque el título principal es chapter-1
-    
-    headings.forEach((heading) => {
-      // Solo agregar ID si no tiene uno ya
-      if (!heading.id) {
-        heading.id = `chapter-${chapterCounter}`;
-        chapterCounter++;
-      }
-    });
-
-    // Retornar el HTML procesado
-    return doc.body.innerHTML;
-  };
-
-  const processedContent = processContentWithIds(marked.parse(article.content) as string);
+    return () => { clearTimeout(timer); observer.disconnect(); };
+  }, [headings]);
 
   return (
     <div className="py-12">
-      <div className="mb-12">
-        <h1 id="chapter-1" className="text-3xl font-bold text-gray-900 mb-4">
+      {/* Article header */}
+      <div className="mb-12 border-b border-gray-200 pb-8">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
           {article.title}
         </h1>
-        <p className="text-gray-600 text-lg">{article.description}</p>
-        
-        {/* Metadatos del artículo */}
+        {article.subtitle && (
+          <p className="text-lg text-gray-600 mb-4">{article.subtitle}</p>
+        )}
+        <p className="text-gray-600 text-lg leading-relaxed">{article.description}</p>
         <div className="flex items-center gap-4 mt-6 text-sm text-gray-500">
           <span>Por {article.author}</span>
           <span>•</span>
           <span>{article.readTime}</span>
           <span>•</span>
-          <span>{new Date(article.createdAt).toLocaleDateString()}</span>
+          <span>{new Date(article.createdAt).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
         </div>
       </div>
-      
-      <div className="prose prose-lg max-w-none">
-        <div dangerouslySetInnerHTML={{ __html: processedContent }} />
-      </div>
+
+      {/* Markdown content with beautiful typography */}
+      <div
+        className="prose prose-lg max-w-none
+          prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-gray-900
+          prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-gray-100
+          prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+          prose-p:text-gray-700 prose-p:leading-relaxed prose-p:text-[1.125rem]
+          prose-strong:text-gray-900 prose-strong:font-semibold
+          prose-em:text-gray-600
+          prose-blockquote:border-l-4 prose-blockquote:border-orange-300 prose-blockquote:bg-orange-50/50 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-blockquote:text-gray-700
+          prose-ul:my-4 prose-ul:space-y-1
+          prose-ol:my-4 prose-ol:space-y-1
+          prose-li:text-gray-700 prose-li:text-[1.1rem]
+          prose-code:text-orange-700 prose-code:bg-orange-50 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-normal
+          prose-pre:bg-gray-900 prose-pre:rounded-xl prose-pre:shadow-lg
+          prose-a:text-orange-600 prose-a:no-underline hover:prose-a:underline
+          prose-img:rounded-xl prose-img:shadow-md
+        "
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </div>
   );
 };
 
-export default DynamicArticleContent; 
+export default DynamicArticleContent;
+export type { Heading };

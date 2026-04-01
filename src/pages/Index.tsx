@@ -44,6 +44,13 @@ const Index = () => {
             <div className="max-w-4xl mx-auto px-4 lg:px-8 py-16">
               
               <div id="content" className="mb-20">
+                <div className="mb-6">
+                  <img
+                    src={`${import.meta.env.BASE_URL}logo_ANLAK_Positivo.png`}
+                    alt="ANLAK Logo"
+                    className="h-10 w-auto object-contain"
+                  />
+                </div>
                 <p className="text-gray-500 mb-4 text-sm tracking-widest uppercase">
                   Powerideas
                 </p>
