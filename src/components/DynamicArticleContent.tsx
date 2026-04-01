@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Article } from "../types/article";
+import { marked } from "marked";
 
 interface DynamicArticleContentProps {
   article: Article;
@@ -66,7 +67,7 @@ const DynamicArticleContent: React.FC<DynamicArticleContentProps> = ({ article }
     return doc.body.innerHTML;
   };
 
-  const processedContent = processContentWithIds(article.content);
+  const processedContent = processContentWithIds(marked.parse(article.content) as string);
 
   return (
     <div className="py-12">
