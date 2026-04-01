@@ -14,51 +14,17 @@ export function HeroScrollAnimation({
   children, 
   heroContent, 
   className = "" 
-}: HeroScrollAnimation) {
+}: HeroScrollAnimationProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  });
-
-  // Hero fades out completely in the first 100vh of scroll
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
-  const heroScale = useTransform(scrollYProgress, [0, 0.15], [1, 0.95]);
-  const heroY = useTransform(scrollYProgress, [0, 0.15], [0, -60]);
-
-  // Scroll indicator fades quickly
-  const scrollIndicatorOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
   return (
     <div ref={containerRef} className={`relative ${className}`}>
-      {/* Hero section — sticky, fades out, then content scrolls in */}
-      <motion.div 
-        className="sticky top-0 h-screen flex items-center justify-center bg-[#FCFBF8] overflow-hidden pointer-events-none"
-        style={{ opacity: heroOpacity }}
-      >
-        <motion.div style={{ scale: heroScale, y: heroY }} className="w-full h-full pointer-events-auto">
-          {heroContent}
-        </motion.div>
+      {/* Hero section — full viewport, scrolls away naturally */}
+      <div className="h-screen flex items-center justify-center bg-[#FCFBF8] overflow-hidden">
+        {heroContent}
+      </div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 pointer-events-auto"
-          style={{ opacity: scrollIndicatorOpacity }}
-        >
-          <div className="flex flex-col items-center gap-2 text-gray-400">
-            <span className="text-xs tracking-widest uppercase">Scroll</span>
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-              className="w-5 h-8 rounded-full border-2 border-gray-300 flex items-start justify-center pt-1"
-            >
-              <div className="w-1 h-2 bg-gray-400 rounded-full" />
-            </motion.div>
-          </div>
-        </motion.div>
-      </motion.div>
-
-      {/* Content — solid background, scrolls over the faded hero */}
+      {/* Content — solid background, scrolls in naturally */}
       <div className="relative bg-[#FCFBF8]">
         {children}
       </div>
@@ -112,6 +78,25 @@ export function HeroContent() {
           />
         ))}
       </div>
+
+      {/* Scroll indicator at bottom */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 1.5 }}
+      >
+        <div className="flex flex-col items-center gap-2 text-gray-400">
+          <span className="text-xs tracking-widest uppercase">Scroll</span>
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            className="w-5 h-8 rounded-full border-2 border-gray-300 flex items-start justify-center pt-1"
+          >
+            <div className="w-1 h-2 bg-gray-400 rounded-full" />
+          </motion.div>
+        </div>
+      </motion.div>
 
       {/* Main content - centered text */}
       <motion.div

@@ -13,6 +13,8 @@ slug: "ai-interaction-patterns"
 contentType: "builder"
 ---
 
+> **TL;DR**: AI products follow 6 interaction patterns that repeat everywhere: Wayfinders (help you start), Prompt Actions (refine drafts), Tuners (adjust vibes), Variations (pick from options), Trust Builders (verify sources), Governors (control autonomy). Understanding these is the new digital literacy.
+
 ## PHASE 1: THE SHIFT
 
 ### 1. The Old Way vs The New Way
