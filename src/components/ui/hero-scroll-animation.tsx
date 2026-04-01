@@ -14,35 +14,35 @@ export function HeroScrollAnimation({
   children, 
   heroContent, 
   className = "" 
-}: HeroScrollAnimationProps) {
+}: HeroScrollAnimation) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"]
   });
 
-  // Faster fade: hero fully gone by 35% scroll
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.35], [1, 0]);
-  const heroScale = useTransform(scrollYProgress, [0, 0.35], [1, 0.92]);
-  const heroY = useTransform(scrollYProgress, [0, 0.35], [0, -80]);
+  // Hero fades out completely in the first 100vh of scroll
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
+  const heroScale = useTransform(scrollYProgress, [0, 0.15], [1, 0.95]);
+  const heroY = useTransform(scrollYProgress, [0, 0.15], [0, -60]);
 
   // Scroll indicator fades quickly
-  const scrollIndicatorOpacity = useTransform(scrollYProgress, [0, 0.08], [1, 0]);
+  const scrollIndicatorOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
   return (
     <div ref={containerRef} className={`relative ${className}`}>
-      {/* Fixed hero overlay that fades out */}
+      {/* Hero section — sticky, fades out, then content scrolls in */}
       <motion.div 
-        className="fixed inset-0 z-20 flex items-center justify-center bg-[#FCFBF8] overflow-hidden"
+        className="sticky top-0 h-screen flex items-center justify-center bg-[#FCFBF8] overflow-hidden pointer-events-none"
         style={{ opacity: heroOpacity }}
       >
-        <motion.div style={{ scale: heroScale, y: heroY }} className="w-full h-full">
+        <motion.div style={{ scale: heroScale, y: heroY }} className="w-full h-full pointer-events-auto">
           {heroContent}
         </motion.div>
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 pointer-events-auto"
           style={{ opacity: scrollIndicatorOpacity }}
         >
           <div className="flex flex-col items-center gap-2 text-gray-400">
@@ -58,11 +58,8 @@ export function HeroScrollAnimation({
         </motion.div>
       </motion.div>
 
-      {/* Spacer for scroll distance (35vh — matches the fade distance) */}
-      <div className="h-[35vh]" />
-
-      {/* Content sits below the hero overlay */}
-      <div className="relative z-30 bg-[#FCFBF8]">
+      {/* Content — solid background, scrolls over the faded hero */}
+      <div className="relative bg-[#FCFBF8]">
         {children}
       </div>
     </div>
