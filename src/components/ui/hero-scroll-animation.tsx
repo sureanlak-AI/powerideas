@@ -61,8 +61,8 @@ export function HeroScrollAnimation({
       {/* Spacer for scroll distance (35vh — matches the fade distance) */}
       <div className="h-[35vh]" />
 
-      {/* Content sits below and scrolls up into view */}
-      <div className="relative z-10 bg-[#FCFBF8]">
+      {/* Content sits below the hero overlay */}
+      <div className="relative z-30 bg-[#FCFBF8]">
         {children}
       </div>
     </div>
