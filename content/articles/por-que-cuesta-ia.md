@@ -7,7 +7,7 @@ image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400
 readTime: "18 min read"
 publishDate: "2026-04-02"
 status: "published"
-author: "Miguel Sureda"
+author: "Sure 🧒"
 tags: ["AI", "UX", "Patterns", "Design", "Software"]
 slug: "por-que-cuesta-ia"
 contentType: "analysis"
