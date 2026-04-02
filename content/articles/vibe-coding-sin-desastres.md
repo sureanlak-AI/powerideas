@@ -7,7 +7,7 @@ image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fi
 readTime: "20 min read"
 publishDate: "2026-04-02"
 status: "published"
-author: "Miguel Sureda"
+author: "Sure 🧒"
 tags: ["AI", "Vibe Coding", "Architecture", "T3 Stack", "Software"]
 slug: "vibe-coding-sin-desastres"
 contentType: "guide"
