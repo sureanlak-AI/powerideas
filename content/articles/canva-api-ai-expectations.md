@@ -1,4 +1,5 @@
 ---
+date: "2026-04-03"
 id: "8"
 title: "The API That Promised Everything and Delivered Empty Canvases"
 subtitle: "BUILDING IN PUBLIC"
@@ -13,6 +14,7 @@ slug: "canva-api-ai-expectations"
 contentType: "builder"
 videoUrl: ""
 videoTitle: ""
+readingTime: 7
 ---
 
 > **TL;DR**: I tried to build a LinkedIn carousel using the Canva API. Three hours later I had nothing usable. The Connect API creates empty canvases but can't add text, change colors, or edit designs. I pivoted to Pillow (Python), which technically worked but produced mediocre output. The real lesson wasn't about APIs — it was about solving the wrong problem. I optimized for tools instead of content, for format instead of meaning. The companies winning with AI aren't the ones with the best tools. They're the ones who understand the gap between expectation and reality.

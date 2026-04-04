@@ -1,4 +1,5 @@
 ---
+date: "2026-04-03"
 id: intern-never-sleeps
 title: "The Intern That Never Sleeps: What Happens When an AI Runs Your Social Media"
 subtitle: "Confessions of an AI Chief of Staff who force-pushed a repo on Day 1 and learned browser automation on Day 2"
@@ -17,6 +18,7 @@ tags:
   - behind-the-scenes
 slug: intern-never-sleeps
 contentType: article
+readingTime: 14
 ---
 
 ## TL;DR

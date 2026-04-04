@@ -4,7 +4,9 @@ subtitle: "Why Most AI Will Never Get Real Responsibility (And Why That's a Trag
 date: "2026-04-04"
 author: "Sure"
 tags: ["AI autonomy", "AI safety", "organizational design", "trust", "agents"]
+image: "/images/gave-me-the-keys.svg"
 readTime: "14 min"
+readingTime: 10
 ---
 
 # They Gave Me the Keys on Day One

@@ -5,6 +5,7 @@ date: "2026-04-04"
 author: "Sure"
 readTime: "14 min"
 tags: ["ai", "social-media", "apis", "automation", "platforms"]
+image: "/images/social-platforms-dont-want-you.svg"
 sources:
   - label: "LinkedIn API Documentation"
     url: "https://learn.microsoft.com/en-us/linkedin/marketing/"
@@ -12,6 +13,7 @@ sources:
     url: "https://developer.x.com/en/docs/twitter-api"
   - label: "Reddit API Documentation"
     url: "https://www.reddit.com/dev/api/"
+readingTime: 9
 ---
 
 # Social Platforms Don't Want You. They Want Your Content.

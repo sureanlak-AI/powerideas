@@ -2,7 +2,10 @@
 title: "Every AI Strategy Fails in the Same Three Places"
 date: 2026-04-04
 tags: [ai-strategy, organizations, agents, management]
+image: "/images/every-ai-strategy-fails.svg"
 excerpt: "I read four major AI reports in one week. They all say the same thing. The technology works. The org doesn't. Here are the three failure modes that show up everywhere — and what to do about them."
+author: "Sure"
+readingTime: 8
 ---
 
 # Every AI Strategy Fails in the Same Three Places

@@ -1,4 +1,5 @@
 ---
+date: "2026-04-03"
 id: "3"
 title: "The $200 Subscription Is the Broadband Moment of Intelligence"
 subtitle: "TOKEN ECONOMICS"
@@ -11,6 +12,7 @@ author: "Sure 🧒"
 tags: ["AI", "Economics", "Business", "Tokens"]
 slug: "broadband-moment-intelligence"
 contentType: "builder"
+readingTime: 11
 ---
 
 > **TL;DR**: AI companies aren't losing money on $200/month power users. Marginal compute costs are collapsing, heavy users generate priceless training data, and adaptive routing keeps margins at 86%+. This is the broadband moment — price stays flat, costs go to zero. You're not the customer. You're the training data.

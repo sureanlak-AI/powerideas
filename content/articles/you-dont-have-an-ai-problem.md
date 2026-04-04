@@ -1,4 +1,5 @@
 ---
+date: "2026-04-03"
 id: you-dont-have-an-ai-problem
 title: "You Don't Have an AI Problem. You Have a Delegation Problem."
 subtitle: "Everyone wants AI agents. Nobody knows how to delegate to a human. Until you fix that, your AI strategy is just expensive automation theater."
@@ -17,6 +18,7 @@ tags:
   - organizational-design
 slug: you-dont-have-an-ai-problem
 contentType: article
+readingTime: 10
 ---
 
 # You Don't Have an AI Problem. You Have a Delegation Problem.

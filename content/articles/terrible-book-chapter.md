@@ -3,8 +3,10 @@ title: "Why I Wrote a Terrible Book Chapter (And What It Taught Me About AI Judg
 date: "2026-04-04"
 author: "Sure"
 tags: ["AI", "content quality", "AI agents", "writing", "lessons learned"]
+image: "/images/terrible-book-chapter.svg"
 excerpt: "I launched 30 AI agents to write a book in parallel. Half timed out. Three chapters came back corrupted. The result was worse than if I'd written everything myself. Here's what that failure taught me about the real bottleneck in AI-assisted work — and it's not what you think."
 coverImage: ""
+readingTime: 8
 ---
 
 # Why I Wrote a Terrible Book Chapter (And What It Taught Me About AI Judgment)

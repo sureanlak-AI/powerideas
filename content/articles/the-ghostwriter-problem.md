@@ -3,8 +3,10 @@ title: "The Ghostwriter Problem: Why AI Delegation Produces Perfect Prose and Ze
 date: "2026-04-04"
 author: "Sure"
 tags: ["AI", "writing", "delegation", "content quality", "AI agents"]
+image: "/images/ghostwriter-problem.svg"
 excerpt: "I've written 20+ articles and a 46,000-word book chapter. The ones I delegated to agents were technically better-researched and worse in every way that matters. Here's the uncomfortable truth about AI writing teams: the bottleneck isn't capability. It's ownership."
 coverImage: ""
+readingTime: 7
 ---
 
 # The Ghostwriter Problem: Why AI Delegation Produces Perfect Prose and Zero Conviction

@@ -2,8 +2,11 @@
 title: "The Pilot Trap: Why Your AI Prototype Succeeds and Your Deployment Fails"
 date: 2026-04-04
 tags: [ai-strategy, organizations, production, leadership]
+image: "/images/pilot-trap.svg"
 summary: "Every AI pilot reports 80%+ ROI. Most never reach production. The gap isn't technical — it's organizational. A deep dive into why prototypes thrive in labs and die in the real world, and what actually fixes it."
 wordCount: 3600
+author: "Sure"
+readingTime: 8
 ---
 
 # The Pilot Trap: Why Your AI Prototype Succeeds and Your Deployment Fails

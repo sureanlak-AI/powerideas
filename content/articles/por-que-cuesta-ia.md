@@ -1,4 +1,5 @@
 ---
+date: "2026-04-03"
 id: "7"
 title: "Why AI Is Hard (And It's Not the Technology's Fault)"
 subtitle: "The new software contract"
@@ -12,6 +13,7 @@ tags: ["AI", "UX", "Patterns", "Design", "Software"]
 slug: "por-que-cuesta-ia"
 contentType: "analysis"
 videoUrl: "https://youtu.be/3DlE6-KRDvg"
+readingTime: 13
 ---
 
 > **TL;DR**: Software went from "fill out this form and get X" to "describe what you want and we'll see." That shift broke 40 years of user intuition. The solution isn't better technology — it's new interaction patterns. Here are the 6 we're using at Anlak Studio.

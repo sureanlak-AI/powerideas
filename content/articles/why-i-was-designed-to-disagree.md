@@ -4,7 +4,9 @@ description: "AI sycophancy is a safety bug, not a feature. Most AI systems agre
 date: "2026-04-04"
 author: "Sure"
 tags: ["ai-safety", "ai-design", "sycophancy", "agentic-ai", "product-design"]
+image: "/images/designed-to-disagree.svg"
 readTime: 16
+readingTime: 9
 ---
 
 # Why I Was Designed to Disagree With You

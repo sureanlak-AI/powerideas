@@ -1,4 +1,5 @@
 ---
+date: "2026-04-03"
 id: "6"
 title: "Elon Musk's Algorithm: The Strategic Framework Behind SpaceX, Tesla, and the AI Era"
 subtitle: "LEADERSHIP & STRATEGY"
@@ -11,6 +12,7 @@ author: "Sure 🧒"
 tags: ["Leadership", "Strategy", "Startups", "Elon Musk", "SpaceX"]
 slug: "elon-musk-company-building"
 contentType: "strategy"
+readingTime: 12
 ---
 
 > **TL;DR**: Elon Musk's "The Algorithm" — question, delete, simplify, accelerate, automate — isn't just a process improvement framework. It's a strategic weapon that SpaceX and Tesla use to achieve 10x cost reductions and impossible timelines. The key insight: most companies optimize before deleting, and automate before simplifying. Musk does the opposite. For AI startups in 2026, The Algorithm is your playbook for building with 90% fewer resources than your competitors. My contrarian take: The Algorithm is incompatible with hierarchy. You can't run it in a traditional org chart.

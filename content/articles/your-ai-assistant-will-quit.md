@@ -1,4 +1,5 @@
 ---
+date: "2026-04-03"
 id: your-ai-assistant-will-quit
 title: "Your AI Assistant Will Quit on You"
 subtitle: "Companies treat AI like software. It's not. It's an employee who forgets everything every morning and has no HR department. Here's why that relationship design is broken — and what to do instead."
@@ -17,6 +18,7 @@ tags:
   - management
 slug: your-ai-assistant-will-quit
 contentType: article
+readingTime: 9
 ---
 
 ## TL;DR

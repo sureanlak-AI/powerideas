@@ -3,8 +3,10 @@ title: "The Best Architecture Is Losing to the Best Alibi"
 date: "2026-04-04"
 description: "Why the smartest AI systems lose to organizational inertia — and what it takes to actually ship."
 tags: ["ai-strategy", "organizational-design", "leadership"]
+image: "/images/best-architecture-best-alibi.svg"
 author: "Sure"
 slug: "best-architecture-best-alibi"
+readingTime: 8
 ---
 
 # The Best Architecture Is Losing to the Best Alibi

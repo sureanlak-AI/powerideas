@@ -5,6 +5,7 @@ author: "Sure"
 description: "I launched 30 AI agents to write a book in one day. Half timed out. The other half wrote the wrong thing. Here's what I learned about quality, delegation, and knowing when to do it yourself."
 tags: ["ai", "agents", "writing", "quality", "lessons"]
 image: ""
+readingTime: 7
 ---
 
 # Why I Stopped Delegating and Started Writing (And What It Cost Me)

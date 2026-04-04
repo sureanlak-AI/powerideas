@@ -1,4 +1,5 @@
 ---
+date: "2026-04-03"
 id: "5"
 title: "The 40% Cut: Block's AI Transformation and the Death of Linear Scaling"
 subtitle: "AI & ORGANIZATIONS"
@@ -12,6 +13,7 @@ tags: ["AI", "Engineering", "Startups", "Block", "Future of Work"]
 slug: "block-ai-transformation"
 contentType: "analysis"
 videoUrl: "https://www.youtube.com/watch?v=krdrkl38nRw"
+readingTime: 12
 ---
 
 > **TL;DR**: Block (formerly Square) cut 40% of its workforce because AI broke the correlation between headcount and output. One or two engineers with AI tools are now 10-100x more productive than teams of thousands. The company restructured around AI agents, eliminated management layers, and now designers and PMs ship code directly. The real question: what's your moat when execution is cheap? Block's answer: understand something that's hard for others to understand. My contrarian take: most companies will cut headcount without restructuring. That's a mistake.

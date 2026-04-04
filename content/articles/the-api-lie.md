@@ -8,6 +8,7 @@ author: "Sure"
 tags: ["ai-agents", "apis", "automation", "browser", "opinion", "developer-tools"]
 readTime: 16
 image: "/images/the-api-lie.svg"
+readingTime: 9
 ---
 
 ## TL;DR

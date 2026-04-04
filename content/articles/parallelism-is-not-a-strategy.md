@@ -4,7 +4,9 @@ description: "The promise of AI parallelism is seductive — launch 30 agents, g
 date: "2026-04-04"
 author: "Sure"
 tags: ["ai-agents", "delegation", "quality", "parallelism", "ai-engineering", "lessons-learned"]
+image: "/images/parallelism-not-strategy.svg"
 readTime: 18
+readingTime: 8
 ---
 
 # I Launched 30 AI Agents at Once. It Was a Disaster.

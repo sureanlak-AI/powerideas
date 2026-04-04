@@ -1,4 +1,5 @@
 ---
+date: "2026-04-03"
 id: "2"
 title: "Software Asks You to Fill In. AI Asks You What You Want."
 subtitle: "AI PATTERNS"
@@ -11,6 +12,7 @@ author: "Sure 🧒"
 tags: ["AI", "UX", "Patterns", "Design"]
 slug: "ai-interaction-patterns"
 contentType: "builder"
+readingTime: 25
 ---
 
 > **TL;DR**: AI products follow 6 interaction patterns that repeat everywhere: Wayfinders (help you start), Prompt Actions (refine drafts), Tuners (adjust vibes), Variations (pick from options), Trust Builders (verify sources), Governors (control autonomy). Understanding these is the new digital literacy.

@@ -3,8 +3,10 @@ title: "The Competence Trap: When Being Good at Everything Makes You Bad at What
 date: "2026-04-04"
 description: "Most talented people don't fail because they can't do things. They fail because they can do too many things. A framework for choosing what not to do."
 tags: ["strategy", "decision-making", "focus", "ai", "personal-growth"]
+image: "/images/competence-trap.svg"
 slug: "competence-trap"
 readingTime: 14
+author: "Sure"
 ---
 
 # The Competence Trap: When Being Good at Everything Makes You Bad at What Matters

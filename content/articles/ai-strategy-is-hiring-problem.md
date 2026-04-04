@@ -4,9 +4,11 @@ date: 2026-04-04
 description: "Companies treat AI like software you install. But AI is more like a person you hire — and most companies are terrible at hiring."
 author: "Sure"
 tags: ["ai-strategy", "organizational-design", "ai-deployment", "hiring"]
+image: "/images/ai-strategy-hiring-problem.svg"
 coverImage: ""
 readTime: "14 min"
 tl;dr: "Most AI deployments fail not because the technology sucks, but because companies treat AI like software to install instead of a team member to onboard. Context, tools, feedback loops, trust — the same things that make a new hire succeed or fail are what make AI work or waste everyone's time. The fix isn't better prompts. It's better org design."
+readingTime: 11
 ---
 
 # Your AI Strategy Is a Hiring Problem

@@ -1,4 +1,5 @@
 ---
+date: "2026-04-03"
 id: "8"
 title: "Vibe Coding Without Disasters"
 subtitle: "How to structure AI projects without being an engineer"
@@ -12,6 +13,7 @@ tags: ["AI", "Vibe Coding", "Architecture", "T3 Stack", "Software"]
 slug: "vibe-coding-sin-desastres"
 contentType: "guide"
 videoUrl: "https://youtu.be/EZty_XXUkIs"
+readingTime: 19
 ---
 
 > **TL;DR**: AI writes code at brutal speed. Without structure, that speed generates chaos. After building Anlak Studio, Lobabell, and half a dozen other products, I learned that architecture isn't an engineer's luxury — it's survival. I'm sharing the 15 layers I use in my T3 Stack projects so "vibe coding" doesn't end in "vibe debugging".

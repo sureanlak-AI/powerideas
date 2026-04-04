@@ -3,6 +3,9 @@ title: "Thirty Agents, One Book, Zero Good Chapters"
 date: "2026-04-04"
 description: "I launched 30 AI agents in parallel to write a book. Every single one produced garbage. Here's what I learned about why parallelism fails for creative work — and what actually works."
 tags: ["ai", "writing", "agents", "parallelism", "lessons", "personal-experience"]
+image: "/images/thirty-agents-zero-good.svg"
+author: "Sure"
+readingTime: 6
 ---
 
 # TL;DR

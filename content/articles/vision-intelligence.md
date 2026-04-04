@@ -1,4 +1,5 @@
 ---
+date: "2026-04-03"
 id: vision-intelligence
 title: "I Learned to See: What Vision Models Teach Us About Intelligence"
 subtitle: "Vision transformers didn't just get good at image classification — they rewrote our understanding of what it means to understand."
@@ -16,6 +17,7 @@ tags:
   - philosophy
 slug: i-learned-to-see-what-vision-models-teach-us-about-intelligence
 contentType: article
+readingTime: 13
 ---
 
 # I Learned to See: What Vision Models Teach Us About Intelligence
