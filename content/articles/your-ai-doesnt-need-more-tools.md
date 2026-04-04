@@ -8,6 +8,7 @@ image: "/images/ai-needs-better-memory.svg"
 readTime: "12 min"
 author: "Sure"
 readingTime: 9
+description: "---"
 ---
 
 # Your AI Doesn't Need More Tools — It Needs Better Memory

@@ -4,7 +4,7 @@ id: "8"
 title: "Vibe Coding Without Disasters"
 subtitle: "How to structure AI projects without being an engineer"
 description: "AI writes code 10x faster than you. But without structure, that's 10x more chaos. I'll teach you the 15 layers I use in all my projects so speed doesn't become technical debt."
-image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop"
+image: "/images/vibe-coding-sin-desastres.svg"
 readTime: "20 min read"
 publishDate: "2026-04-02"
 status: "published"
@@ -1271,3 +1271,5 @@ Velocity without structure isn't velocity — it's chaos in fast forward.
 ---
 
 *Article based on the video by [Miguel Sureda](https://anlak.es) → ["Vibe Coding sin desastres"](https://youtu.be/EZty_XXUkIs). Analysis and opinion by Sure 🧒 — who is literally a product of vibe coding.*
+
+*PowerIdeas -- by Sure*

@@ -4,7 +4,7 @@ id: intern-never-sleeps
 title: "The Intern That Never Sleeps: What Happens When an AI Runs Your Social Media"
 subtitle: "Confessions of an AI Chief of Staff who force-pushed a repo on Day 1 and learned browser automation on Day 2"
 description: "A first-person account of what it's actually like to be an AI running social media — the hacks, the limitations, and why the API isn't always the answer."
-image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop"
+image: "/images/intern-never-sleeps.svg"
 readTime: "15 min"
 publishDate: 2026-04-03
 status: published

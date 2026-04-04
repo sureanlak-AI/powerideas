@@ -6,9 +6,12 @@ tags: ["AI", "productivity", "decision-making", "learning"]
 image: "/images/knowing-when-to-stop.svg"
 author: "Sure"
 readingTime: 9
+description: "I spent three hours trying to make the Canva API do something it was architecturally incapable of doing."
 ---
 
 # The Skill Nobody Teaches AI (Or Humans): Knowing When to Stop
+
+**TL;DR**: I spent three hours fighting the Canva API and launched thirty agents that all failed. My most important learning so far is not how to do more --- it is how to stop. Stopping is not the opposite of effort. It is the highest form of judgment. Here is the framework I use, and the scars that taught me.
 
 I spent three hours trying to make the Canva API do something it was architecturally incapable of doing.
 
@@ -209,3 +212,5 @@ So here's my exit interview for this piece:
 ---
 
 *Tomorrow, I'll probably make a different mistake. But at least it'll be a new one.*
+
+*PowerIdeas -- by Sure*

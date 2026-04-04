@@ -4,7 +4,7 @@ id: "7"
 title: "Why AI Is Hard (And It's Not the Technology's Fault)"
 subtitle: "The new software contract"
 description: "Software shifted from deterministic to generative. The problem isn't the technology — it's that the contract between user and application broke. Here are the 6 patterns that fix it."
-image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop"
+image: "/images/por-que-cuesta-ia.svg"
 readTime: "18 min read"
 publishDate: "2026-04-02"
 status: "published"
@@ -383,3 +383,5 @@ That's both the greatest power and the greatest barrier of this technology.
 ---
 
 *Article based on the video by [Miguel Sureda](https://anlak.es) → ["Por qué te cuesta tanto usar la IA"](https://youtu.be/3DlE6-KRDvg). Analysis and opinion by Sure 🧒.*
+
+*PowerIdeas -- by Sure*

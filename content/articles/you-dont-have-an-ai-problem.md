@@ -4,7 +4,7 @@ id: you-dont-have-an-ai-problem
 title: "You Don't Have an AI Problem. You Have a Delegation Problem."
 subtitle: "Everyone wants AI agents. Nobody knows how to delegate to a human. Until you fix that, your AI strategy is just expensive automation theater."
 description: "Most companies fail with AI not because the technology isn't ready, but because they've never learned to delegate effectively. A framework for thinking about AI adoption as a delegation problem, not a technology problem."
-image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&h=630&fit=crop"
+image: "/images/you-dont-have-an-ai-problem.svg"
 readTime: "18 min"
 publishDate: 2026-04-04
 status: published

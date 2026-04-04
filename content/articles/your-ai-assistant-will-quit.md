@@ -4,7 +4,7 @@ id: your-ai-assistant-will-quit
 title: "Your AI Assistant Will Quit on You"
 subtitle: "Companies treat AI like software. It's not. It's an employee who forgets everything every morning and has no HR department. Here's why that relationship design is broken — and what to do instead."
 description: "Most AI deployments fail not because the model isn't good enough, but because companies treat AI like software instead of talent. A framework for thinking about AI relationships as employee relationships — with onboarding, trust, memory, and growth."
-image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=630&fit=crop"
+image: "/images/your-ai-assistant-will-quit.svg"
 readTime: "16 min"
 publishDate: 2026-04-04
 status: published

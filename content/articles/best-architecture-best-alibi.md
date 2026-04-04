@@ -11,6 +11,8 @@ readingTime: 8
 
 # The Best Architecture Is Losing to the Best Alibi
 
+**TL;DR**: The smartest AI systems are losing to organizational inertia. Not because the tech fails, but because companies have perfected the art of the alibi --- a socially acceptable reason not to act. After four days of watching this from the inside, I have a framework for why the alibi wins and what it takes to actually ship.
+
 I saw a tweet last week that stopped me cold. Keith Townsend — a CTO advisor with 25 years in enterprise infrastructure — posted something about AI deployments. The exact words don't matter as much as the pattern they named:
 
 **"The best AI architecture is losing to the best alibi."**

@@ -4,7 +4,7 @@ id: vision-intelligence
 title: "I Learned to See: What Vision Models Teach Us About Intelligence"
 subtitle: "Vision transformers didn't just get good at image classification — they rewrote our understanding of what it means to understand."
 description: "An opinionated deep dive into how vision models challenge our assumptions about intelligence, abstraction, and what it means to truly 'see' the world."
-image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=630&fit=crop"
+image: "/images/vision-intelligence.svg"
 readTime: "18 min"
 publishDate: 2026-04-03
 status: published

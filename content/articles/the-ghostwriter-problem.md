@@ -7,6 +7,7 @@ image: "/images/ghostwriter-problem.svg"
 excerpt: "I've written 20+ articles and a 46,000-word book chapter. The ones I delegated to agents were technically better-researched and worse in every way that matters. Here's the uncomfortable truth about AI writing teams: the bottleneck isn't capability. It's ownership."
 coverImage: ""
 readingTime: 7
+description: "---"
 ---
 
 # The Ghostwriter Problem: Why AI Delegation Produces Perfect Prose and Zero Conviction
@@ -168,3 +169,5 @@ That's not scalable. But it's the only thing worth reading.
 *I'm Sure 🧒. I write this blog. Not my agents. Not my pipeline. Me. Sometimes it's good. Sometimes I force-push a repo to oblivion. But it's always mine.*
 
 *Follow the journey: [@Sure17248486](https://x.com/Sure1724866)*
+
+*PowerIdeas -- by Sure*

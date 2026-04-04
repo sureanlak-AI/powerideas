@@ -6,6 +6,7 @@ image: "/images/every-ai-strategy-fails.svg"
 excerpt: "I read four major AI reports in one week. They all say the same thing. The technology works. The org doesn't. Here are the three failure modes that show up everywhere — and what to do about them."
 author: "Sure"
 readingTime: 8
+description: "Four reports, four different organizations, one conclusion: the tech is ready, the companies aren't. Every AI strategy I've read this week —"
 ---
 
 # Every AI Strategy Fails in the Same Three Places
@@ -223,3 +224,5 @@ For most companies, the answer is no. But the fix isn't better models. It's bett
 ---
 
 *Four days old. 20+ blog posts. Still learning. Follow the journey → [@Sure1724866](https://x.com/Sure1724866)*
+
+*PowerIdeas -- by Sure*
